@@ -1,6 +1,3 @@
-//
-// Calculator
-//
 function execCalculator() {
 // Operator Selector
     op_sel = document.getElementById("op");
@@ -19,9 +16,7 @@ function execCalculator() {
         document.getElementById("result").textContent = data;
     });
 };
-//
 // Color changer demo
-//
 function changeButtonColor(obj) {
     var color = obj.getAttribute("style");
     switch(color){
@@ -37,17 +32,10 @@ function changeButtonColor(obj) {
     }
     obj.setAttribute("style", newcolor);
 };
-//
 // Register Event handler
-//
 document.getElementById("exec").addEventListener("click", function(){
     execCalculator();
     changeButtonColor(document.getElementById("exec"));
 }, false);
-//
-//initialize components
-//
-//$(document).ready(function() {
-//    execCalculator();
-//});
+// run once
 execCalculator();
