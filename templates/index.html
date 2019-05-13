@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>A Flask calculator</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Flask Calculator</h1>
+    <div>
+        <p>a
+        <input type=number id=aval value=1>
+        </p>
+
+        <p>op
+        <select id=op>
+            <option value="+" selected>+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        </p>
+
+        <p>b
+        <input type=number id=bval value=1>
+        </p>
+
+        <p id=result>
+            0
+        </p>
+        <br/>
+        <!-- The event handler is defined in the calculator.js. -->
+        <input type=button id=exec value="Exe.">
+    </div>
+    <div>
+        <!-- The event handler is descrived on an event attribute. -->
+        <input type=button id=log value="Console log" onclick="console.log('Button pushed!')">
+    </div>
+</body>
+<script type="text/javascript" src="/static/calculator.js"> </script>
+
+</html>
