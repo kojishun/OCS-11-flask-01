@@ -15,8 +15,8 @@ def exec_calculate(func):
         return "error"
 
     # Obtain query parameters
-    a = request.args.get("a", default=0, type=int)
-    b = request.args.get("b", default=0, type=int)
+    a = request.args.get("a", default=0, type=float)
+    b = request.args.get("b", default=0, type=float)
     op = request.args.get("op", "+")
     
     # Calculater
@@ -31,6 +31,8 @@ def exec_calculate(func):
             ret = "error(0 div)"
         else:
             ret = str(a / b)
+    elif op == "**":
+        ret = str(a ** b)
     else:
             ret = "error(unknown)"
 
