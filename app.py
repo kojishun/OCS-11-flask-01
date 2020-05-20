@@ -31,8 +31,11 @@ def exec_calculate(func):
             ret = "error(0 div)"
         else:
             ret = str(a / b)
-    elif op == "**":
-        ret = str(a ** b)
+    elif op == "^" or op == "exp":
+        if a < 0:
+            ret = "error(base must be non negative)"
+        else:
+            ret = str(a ** b)
     else:
             ret = "error(unknown)"
 
